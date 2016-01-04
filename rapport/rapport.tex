@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{color}
+\usepackage{stmaryrd}
+\usepackage{fancyhdr}
+\usepackage{fullpage}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+
+% Enlève les contours des liens
+\hypersetup{
+    linkbordercolor={1 1 1},
+    citebordercolor={1 1 1},
+    urlbordercolor={1 1 1},
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+
+
+% Redéfinis les marges des tableaux
+\let\oldtabular=\tabular
+\def\tabular{\small\oldtabular}
+\renewcommand{\arraystretch}{1.5}
+
+
+\title{\textbf{DR70 - Le dossier médical patient}}
+\author{Benoit HOUDAYER, Anthony RUHIER}
+\date{04 janvier 2016}
+
+\setlength{\headheight}{12pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Benoit HOUDAYER, Anthony RUHIER}
+\fancyhead[R]{DR70 - Le dossier médical patient}
+\geometry{headsep=5ex}
+
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+
+    \vspace{1em}
+\end{document}
