@@ -34,7 +34,7 @@
     il est nécessaire d'utiliser une bibliothèque propriétaire, détenue par la caisse d'assurance maladie.
 
         \subsection{Stockage des données}
-        \subsubsection{Agrément}
+            \subsubsection{Agrément}
 
 \paragraph{}
 Pour pouvoir stocker des données médicales, un hébergeur doit obtenir un
@@ -101,7 +101,7 @@ que la liste des adhérents ne contient aucune société dont le secteur
 d'activité est la publicité, bien que SFR et Orange possèdent des divisions qui
 y sont liées.
 
-        \subsection{Cas autorisés}
+        \subsection{Champs d'application}
 
 \paragraph{}
 Pour stocker des données médicales, il faut tout d'abord obtenir l'autorisation
@@ -128,5 +128,50 @@ ont bien été effacées.
 
 
         \subsection{Accès aux données}
+
+\paragraph{}
+Dans le cas de l'hébergement d'une application permettant au patient d'accéder
+directement à des informations liées à son dossier médical, certaines
+contraintes de sécurité sont requises, détaillées dans l'article L1110--4 du
+code de la santé publique.
+
+\paragraph{}
+Lors de la demande d'agrément, l'hébergeur doit renseigner la façon dont sont
+intégrées l'identification et l'authentification du patient dans son
+application.
+
+            \subsubsection{Identification}
+
+\paragraph{}
+L'hébergeur doit assurer que les méthodes d'identification utilisées par
+l'application attribuent le bon identifiant au bon patient, en ne présentant
+aucun cas de doublons et de risques de collisions entre dossiers de patients
+différents.
+
+            \subsubsection{Authentification}
+
+\paragraph{}
+Afin de préserver la sécurité des accès, un moyen d'authentification forte doit
+être impérativement utilisé. Plusieurs solutions sont proposées.
+
+\paragraph{}
+L'hébergeur peut utiliser un couple d'identifiant/mot de passe associé à un
+mot de passe à usage unique appelé OTP\@. Il doit dans ce cas indiquer la
+procédure d'envoi du mot de passe au patient, la façon de l'initialiser à la
+première connexion ainsi que la procédure d'envoi des informations liées à
+OTP\@.
+
+\paragraph{}
+Il peut également utiliser un certificat électronique contenu dans une carte à
+puce, mais comme pour OTP, la façon de délivrer au client ce certificat doit
+être détaillée, ainsi que les moyens par lesquels il est protégé.
+
+\paragraph{}
+Pour l'identification comme pour l'authentification, quand l'hébergeur n'est
+pas directement en lien avec le patient mais joue le rôle de prestataire, il
+doit définir de manière explicite les principes que s'engage à respecter son
+client afin de garantir la bonne sécurité des données.
+
+
 % carte vitale
 % qui peut stocker les données ?
