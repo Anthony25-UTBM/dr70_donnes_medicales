@@ -4,7 +4,7 @@
 
     La carte Vitale a été mise en service dès 1998, elle permet d'identifier de manière unique un assuré social, et est un composant du
     système d'information SESAM-Vitale. En plus de l'identifiant unique, la carte contient
-    les informations suivantes :
+    les informations suivantes~:
 
     \begin{itemize}
         \item l'identité du titulaire et de ses ayant-droits de moins de 16 ans
@@ -14,9 +14,9 @@
         \item les droits à l'exonération du ticket modérateur (frais médicaux normalement à la charge du patient)
     \end{itemize}
 
-        Une nouvelle version, appelée Vitale 2 
+        Une nouvelle version, appelée Vitale 2
     a quant à elle été introduite en 2007 pour remplacer progressivement les cartes existantes.
-    À la différence de la première version, une photo de l'assuré est présente sur la face et des 
+    À la différence de la première version, une photo de l'assuré est présente sur la face et des
     informations supplémentaires sont présentes sur sa mémoire.
 
     \begin{itemize}
@@ -30,7 +30,7 @@
 
     Techniquement, La carte vitale est équipée d'un microprocesseur lui permettant de chiffrer et
     déchiffrer ses données de manière autonome. En plus des mesures de chiffrement le protocole
-    permettant de questionner la carte est maintenu secret. Ainsi, pour pouvoir lire ou écrire une carte vitale, 
+    permettant de questionner la carte est maintenu secret. Ainsi, pour pouvoir lire ou écrire une carte vitale,
     il est nécessaire d'utiliser une bibliothèque propriétaire, détenue par la caisse d'assurance maladie.
 
         \subsection{Stockage des données}
@@ -46,13 +46,13 @@ durant 20 ans. Dans le cas d'une première demande, la société doit remplir un
 formulaire qui sera évalué par l'ASIP qui va poursuivre ou non les démarches.
 
 \paragraph{}
-Selon
-le Code de la Santé Publique \footnote{\url{http://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=B4723D30F71044611FD12BFBB7948576.tpdila07v_3?idArticle=LEGIARTI000023676881&cidTexte=LEGITEXT000006072665}},
-les conditions nécessaires pour se voir accorder
-l'agrément sont les suivantes :
+Selon le Code de la Santé
+Publique\footnote{\url{http://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=B4723D30F71044611FD12BFBB7948576.tpdila07v_3?idArticle=LEGIARTI000023676881&cidTexte=LEGITEXT000006072665}},
+les conditions nécessaires pour se voir accorder l'agrément sont les
+suivantes~:
 \begin{enumerate}
     \item La structure qui accueillera les données médicales est jugée comme
-        fiable en terme de conservation et sécurité. L'hébergeur doit avoir
+        fiable en termes de conservation et sécurité. L'hébergeur doit avoir
         recours à des personnels qualifiés dans ces deux domaines, et doit
         avoir en place une organisation, des procédures de contrôles et des
         solutions techniques garantissant la protection, la sauvegarde et la
@@ -76,6 +76,56 @@ De façon à vérifier que ces conditions sont validées, un audit est demandé 
 l'ASIP\@. Lors du renouvellement, celui ci est externe et à la charge de
 l'hébergeur, autrement il est effectué par l'ASIP dans cadre de la première
 demande.
+
+
+        \subsection{Hébergeurs agréés}
+
+\paragraph{}
+Une association d'hébergeurs agréés pour la conservation de données médicales a
+été créée en 2010 pour faciliter les nouveaux arrivants à effectuer les
+démarches nécessaires. Elle se nomme l'AFHADS\footnote{\emph{AFHADS~: }
+Association Française des Hébergeurs Agréés de Données de Santé à Caractère
+Personnel} et permet de jouer le rôle de lobby pour les sociétés membres. Début
+2015, lors des votes sur la loi relative au renseignement, elle s'est manifesté
+pour clarifier la situation sur les données médicales~: elles sont censées être
+gardées confidentielles, mais le gouvernement souhaitait avoir un regard sur
+celles-ci. Suite à cela, des arrangements non publics avec quelques-uns des
+plus gros membres ont été signés.
+
+\paragraph{}
+Comme exemples de sociétés agréées pour l'hébergement de données médicales
+peuvent être cités SFR et Orange, pour leurs offres d'hébergement ``Cloud
+Santé'', CEV, AZNetwork ou encore Pro BTP, première société donc le domaine
+d'activité principal ne se situe pas l'informatique. Il est rassurant de voir
+que la liste des adhérents ne contient aucune société dont le secteur
+d'activité est la publicité, bien que SFR et Orange possèdent des divisions qui
+y sont liées.
+
+        \subsection{Cas autorisés}
+
+\paragraph{}
+Pour stocker des données médicales, il faut tout d'abord obtenir l'autorisation
+du patient concerné~: aucune donnée de ce type ne peut être conservée sans
+autorisation préalable.
+
+\paragraph{}
+Les données ne peuvent pas être vendues à une société tierce, et ne peuvent
+être utilisées par exemple par des sociétés publicitaires. La partie de
+l'activité portant sur l'hébergement de ces données doit être nettement séparée
+du reste, comme demandé pour l'obtention de l'agrément, de façon à éviter toute
+ambigüité. Cette restriction se veut rassurante avec l'arrivée, par exemple, de
+Google dans le domaine médical avec Google X, dont la source de revenus
+principale est la publicité.
+
+\paragraph{}
+La situation la plus courante pour un hébergeur de données médicales est un
+contrat signé avec un professionnel de la santé. L'hébergeur ne doit pas
+obligatoirement posséder une expertise dans le domaine médical, tant que les
+conditions du contrat respectent celles imposées par l'agrément. Arrivé en fin
+de contrat, l'hébergeur se doit de remettre à son client l'intégralité des
+données le concernant ainsi que ses patients, tout en prouvant que les données
+ont bien été effacées.
+
 
         \subsection{Accès aux données}
 % carte vitale
