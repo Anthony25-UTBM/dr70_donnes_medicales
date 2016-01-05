@@ -48,16 +48,18 @@
 
 \begin{document}
     \maketitle
+    \vspace{4em}
     \tableofcontents
 
     \vspace{1em}
     \afterpage{\cfoot{\thepage}}
+    \newpage
 
 %%%% Includes des chapitres :
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{chapters/introduction}
-\include{chapters/dossier_medical}
-\include{chapters/moyens_techniques}
-\include{chapters/conclusion}
+\input{chapters/introduction}
+\input{chapters/dossier_medical}
+\input{chapters/moyens_techniques}
+\input{chapters/conclusion}
 
 \end{document}
