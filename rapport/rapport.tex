@@ -41,8 +41,8 @@
 
 \date{04 janvier 2016}
 
-\setlength{\headheight}{12pt}
 \pagestyle{fancy}
+\setlength{\headheight}{12pt}
 \fancyhf{}
 \fancyhead[L]{Benoit HOUDAYER, Anthony RUHIER}
 \fancyhead[R]{DR70 - Le dossier médical patient}
@@ -51,15 +51,16 @@
 
 \begin{document}
     \maketitle
+    \thispagestyle{empty}
     \vspace{4em}
     \tableofcontents
 
-    \vspace{1em}
     \afterpage{\cfoot{\thepage}}
     \newpage
 
 %%%% Includes des chapitres :
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{page}{1}
 \input{chapters/introduction}
 \input{chapters/dossier_medical}
 \input{chapters/moyens_techniques}
