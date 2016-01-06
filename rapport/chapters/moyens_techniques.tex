@@ -1,45 +1,7 @@
     \section{Moyens techniques}
-        \subsection{La carte vitale}
 
-\paragraph{}
-La carte Vitale a été mise en service dès 1998, elle permet d'identifier de
-manière unique un assuré social, et est un composant du système
-d'information SESAM-Vitale. En plus de l'identifiant unique, la carte
-contient les informations suivantes~:
+        \subsection{Agrément}
 
-\begin{itemize}
-    \item l'identité du titulaire et de ses ayant-droits de moins de 16 ans
-    \item le numéro de sécurité sociale du titulaire
-    \item le régime d'assurance maladie et l'organisme de rattachement
-    \item les droits à la couverture maladie universelle complémentaire (CMUC)
-    \item les droits à l'exonération du ticket modérateur (frais médicaux normalement à la charge du patient)
-\end{itemize}
-
-\paragraph{}
-Une nouvelle version, appelée Vitale 2 a quant à elle été introduite en
-2007 pour remplacer progressivement les cartes existantes.  À la différence
-de la première version, une photo de l'assuré est présente sur la face et
-des informations supplémentaires sont présentes sur sa mémoire.
-
-\begin{itemize}
-    \item le médecin traitant
-    \item la mutuelle
-    \item la personne à prévenir en cas d'accident
-    \item les informations sur l'accès aux soins dans l'UE
-    \item la gestion des accidents du travail
-    \item la carte de donneur d'organe du titulaire
-\end{itemize}
-
-\paragraph{}
-Techniquement, La carte vitale est équipée d'un microprocesseur lui
-permettant de chiffrer et déchiffrer ses données de manière autonome. En
-plus des mesures de chiffrement le protocole permettant de questionner la
-carte est maintenu secret. Ainsi, pour pouvoir lire ou écrire une carte
-vitale, il est nécessaire d'utiliser une bibliothèque propriétaire, détenue
-par la caisse d'assurance maladie.
-
-        \subsection{Stockage des données}
-            \subsubsection{Agrément}
 
 \paragraph{}
 Pour pouvoir stocker des données médicales, un hébergeur doit obtenir un
@@ -49,6 +11,8 @@ trois ans. La seule exception à la nécessité de posséder cet agrément est d
 le cas de la conservation de données hospitalières, qui peuvent être conservés
 durant 20 ans. Dans le cas d'une première demande, la société doit remplir un
 formulaire qui sera évalué par l'ASIP qui va poursuivre ou non les démarches.
+
+            \subsubsection{Stockage des données}
 
 \paragraph{}
 Selon le Code de la Santé
@@ -82,8 +46,51 @@ l'ASIP\@. Lors du renouvellement, celui ci est externe et à la charge de
 l'hébergeur, autrement il est effectué par l'ASIP dans cadre de la première
 demande.
 
+            \subsubsection{Accès aux données}
 
-        \subsection{Hébergeurs agréés}
+\paragraph{}
+Dans le cas de l'hébergement d'une application permettant au patient d'accéder
+directement à des informations liées à son dossier médical, certaines
+contraintes de sécurité sont requises, détaillées dans l'article L1110--4 du
+code de la santé publique.
+
+\paragraph{}
+Lors de la demande d'agrément, l'hébergeur doit renseigner la façon dont sont
+intégrées l'identification et l'authentification du patient dans son
+application.
+
+
+\paragraph{Identification\\}
+L'hébergeur doit assurer que les méthodes d'identification utilisées par
+l'application attribuent le bon identifiant au bon patient, en ne présentant
+aucun cas de doublons et de risques de collisions entre dossiers de patients
+différents.
+
+
+\paragraph{Authentification\\}
+Afin de préserver la sécurité des accès, un moyen d'authentification forte doit
+être impérativement utilisé. Plusieurs solutions sont proposées.
+
+\paragraph{}
+L'hébergeur peut utiliser un couple d'identifiant/mot de passe associé à un
+mot de passe à usage unique appelé OTP\@. Il doit dans ce cas indiquer la
+procédure d'envoi du mot de passe au patient, la façon de l'initialiser à la
+première connexion ainsi que la procédure d'envoi des informations liées à
+OTP\@.
+
+\paragraph{}
+Il peut également utiliser un certificat électronique contenu dans une carte à
+puce, mais comme pour OTP, la façon de délivrer au client ce certificat doit
+être détaillée, ainsi que les moyens par lesquels il est protégé.
+
+\paragraph{}
+Pour l'identification comme pour l'authentification, quand l'hébergeur n'est
+pas directement en lien avec le patient mais joue le rôle de prestataire, il
+doit définir de manière explicite les principes que s'engage à respecter son
+client afin de garantir la bonne sécurité des données.
+
+
+        \subsubsection{Hébergeurs agréés}
 
 \paragraph{}
 Une association d'hébergeurs agréés pour la conservation de données médicales a
@@ -132,47 +139,41 @@ données le concernant ainsi que ses patients, tout en prouvant que les données
 ont bien été effacées.
 
 
-        \subsection{Accès aux données}
+        \subsection{La carte vitale}
 
 \paragraph{}
-Dans le cas de l'hébergement d'une application permettant au patient d'accéder
-directement à des informations liées à son dossier médical, certaines
-contraintes de sécurité sont requises, détaillées dans l'article L1110--4 du
-code de la santé publique.
+La carte Vitale a été mise en service dès 1998, elle permet d'identifier de
+manière unique un assuré social, et est un composant du système
+d'information SESAM-Vitale. En plus de l'identifiant unique, la carte
+contient les informations suivantes~:
+
+\begin{itemize}
+    \item l'identité du titulaire et de ses ayant-droits de moins de 16 ans
+    \item le numéro de sécurité sociale du titulaire
+    \item le régime d'assurance maladie et l'organisme de rattachement
+    \item les droits à la couverture maladie universelle complémentaire (CMUC)
+    \item les droits à l'exonération du ticket modérateur (frais médicaux normalement à la charge du patient)
+\end{itemize}
 
 \paragraph{}
-Lors de la demande d'agrément, l'hébergeur doit renseigner la façon dont sont
-intégrées l'identification et l'authentification du patient dans son
-application.
+Une nouvelle version, appelée Vitale 2 a quant à elle été introduite en
+2007 pour remplacer progressivement les cartes existantes.  À la différence
+de la première version, une photo de l'assuré est présente sur la face et
+des informations supplémentaires sont présentes sur sa mémoire.
 
-            \subsubsection{Identification}
-
-\paragraph{}
-L'hébergeur doit assurer que les méthodes d'identification utilisées par
-l'application attribuent le bon identifiant au bon patient, en ne présentant
-aucun cas de doublons et de risques de collisions entre dossiers de patients
-différents.
-
-            \subsubsection{Authentification}
-
-\paragraph{}
-Afin de préserver la sécurité des accès, un moyen d'authentification forte doit
-être impérativement utilisé. Plusieurs solutions sont proposées.
+\begin{itemize}
+    \item le médecin traitant
+    \item la mutuelle
+    \item la personne à prévenir en cas d'accident
+    \item les informations sur l'accès aux soins dans l'UE
+    \item la gestion des accidents du travail
+    \item la carte de donneur d'organe du titulaire
+\end{itemize}
 
 \paragraph{}
-L'hébergeur peut utiliser un couple d'identifiant/mot de passe associé à un
-mot de passe à usage unique appelé OTP\@. Il doit dans ce cas indiquer la
-procédure d'envoi du mot de passe au patient, la façon de l'initialiser à la
-première connexion ainsi que la procédure d'envoi des informations liées à
-OTP\@.
-
-\paragraph{}
-Il peut également utiliser un certificat électronique contenu dans une carte à
-puce, mais comme pour OTP, la façon de délivrer au client ce certificat doit
-être détaillée, ainsi que les moyens par lesquels il est protégé.
-
-\paragraph{}
-Pour l'identification comme pour l'authentification, quand l'hébergeur n'est
-pas directement en lien avec le patient mais joue le rôle de prestataire, il
-doit définir de manière explicite les principes que s'engage à respecter son
-client afin de garantir la bonne sécurité des données.
+Techniquement, La carte vitale est équipée d'un microprocesseur lui
+permettant de chiffrer et déchiffrer ses données de manière autonome. En
+plus des mesures de chiffrement le protocole permettant de questionner la
+carte est maintenu secret. Ainsi, pour pouvoir lire ou écrire une carte
+vitale, il est nécessaire d'utiliser une bibliothèque propriétaire, détenue
+par la caisse d'assurance maladie.
